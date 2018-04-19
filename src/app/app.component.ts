@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Org Chart Designer';
+  appMenuOpen: Boolean = false;
+  leftSideBarMenuOpen: Boolean = false;
+
+  toggleLeftMenu(): void {
+    this.leftSideBarMenuOpen = !this.leftSideBarMenuOpen;
+  }
+
+  toggleAppMenu(): void {
+    this.appMenuOpen = !this.appMenuOpen;
+    console.log('Opened App Menu');
+  }
 }

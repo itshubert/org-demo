@@ -1,2 +1,13 @@
-<ftr-header title="{{title}}"></ftr-header>
+<ftr-header>
+    <ftr-left-menu-button (click)="toggleLeftMenu()"></ftr-left-menu-button>
+    <h4 class="title">{{title}}</h4>
+    <ftr-hamburger-menu (click)="toggleAppMenu()"></ftr-hamburger-menu>
+</ftr-header>
 
+<div *ngIf="leftSideBarMenuOpen">
+    Left Sidebar Menu is open!
+</div>
+
+<div *ngIf="appMenuOpen">
+    Application Menu is open!
+</div>
